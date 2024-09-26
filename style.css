@@ -34,6 +34,8 @@ h2 {
 
   padding: 2rem 0;
   margin-bottom: 2rem;
+
+  list-style: none;
 }
 
 .card {
@@ -55,6 +57,9 @@ h2 {
 .card--text {
   margin: 0.2rem;
   padding: 1rem;
+  line-height: 2.5;
+
+  list-style: none;
 
   border-radius: 5px;
 }
@@ -64,4 +69,14 @@ h2 {
   margin: 0 auto;
 
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.game {
+  margin: 0.2rem;
+  padding: 1rem;
+}
+
+.games--title{
+  margin-top: 0%;
+  margin-bottom: 3%;
 }

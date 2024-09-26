@@ -8,27 +8,30 @@ for(let i = 0; i < data.length; i++){
 
     const title = document.createElement("h2")
     title.classList.add("card--title")
-    title.innerText = pokemon.name
+    title.innerText = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
     card.appendChild(title)
 
     const image = document.createElement("img")
     image.width = "256"
     image.classList.add("card--img")
     image.src = pokemon.sprites.other["official-artwork"].front_default
+    image.alt = pokemon.name
     card.appendChild(image) 
 
     const cardText = document.createElement("ul")
     cardText.classList.add("card--text")
     for (let i = 0; i < pokemon.stats.length; i++){
         const stat = document.createElement("li")
-        stat.innerText = `${pokemon.stats[i].stat.name}: ${pokemon.stats[i].base_stat}`
+        stat.innerText = `${pokemon.stats[i].stat.name}: ${pokemon.stats[i].base_stat}`.toUpperCase()
         cardText.appendChild(stat)
     }
     card.appendChild(cardText)
 
-    const games = document.createElement("li") 
+    const games = document.createElement("ul") 
+    games.classList.add("game")
     const gamesTitle = document.createElement("h4")
-    gamesTitle.innerText = "Games:"
+    gamesTitle.classList.add("games--title")
+    gamesTitle.innerText = "Appeared in:"
     games.appendChild(gamesTitle)
 
     const listOfGames = document.createElement("div")
